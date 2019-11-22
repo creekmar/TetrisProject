@@ -18,6 +18,7 @@ public class LameBrain implements Brain {
 	 See the Brain interface for details.
 	*/
 	public Brain.Move bestMove(Board board, Piece piece, int limitHeight, Brain.Move move) {
+		
 		// Allocate a move object if necessary
 		if (move==null) move = new Brain.Move();
 		
@@ -57,7 +58,7 @@ public class LameBrain implements Brain {
 			current = current.nextRotation();
 			if (current == piece) break;	// break if back to original rotation
 		}
-		
+
 		if (bestPiece == null) return(null);	// could not find a play at all!
 		else {
 			move.x=bestX;
