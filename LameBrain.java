@@ -96,6 +96,13 @@ public class LameBrain implements Brain {
 				if  (!board.getGrid(x,y)) {
 					holes++;
 				}
+				//TODO
+				if(y<maxHeight)
+					if(!board.getGrid(x, y+1))
+						holes++;
+				if(y!=0)
+					if(!board.getGrid(x, y-1))
+						holes++;
 				y--;
 			}
 		}
