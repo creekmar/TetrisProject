@@ -247,7 +247,7 @@ public final class Piece {
 	{
 		String out = "";
 		for(Point p: body)
-			out += p.toString() + " ";
+			out += "(" + p.x + "," + p.y + ")";
 		return out;
 	}
 }

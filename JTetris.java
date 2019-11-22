@@ -385,7 +385,6 @@ public class JTetris extends JComponent {
 		
 		// try out the new position (rolls back if it doesn't work)
 		int result = setCurrent(newPiece, newX, newY);
-		System.out.println(result);
 		// if row clearing is going to happen, draw the
 		// whole board so the green row shows up
 		if (result ==  Board.PLACE_ROW_FILLED) repaint();
@@ -399,7 +398,6 @@ public class JTetris extends JComponent {
 			if (currentPiece != null) board.place(currentPiece, currentX, currentY);
 		}
 		
-		System.out.println(failed);
 		
 		/*
 		 How to detect when a piece has landed:

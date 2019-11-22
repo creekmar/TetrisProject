@@ -171,25 +171,28 @@ public final class Board  {
 			System.arraycopy(grid[i], 0, backupGrid[i], 0, grid[i].length);
 		}
 		
+		
 		Point[] body = piece.getBody();
 		
-		if(x < 0 || y < 0 || x + piece.getWidth() > width || y + piece.getHeight() > height)
+		if(x < 0 || y < 0 || x + piece.getWidth() > width || y + piece.getHeight() > height) {
 			return PLACE_OUT_OF_BOUNDS;
+		}
 		for(Point p: body) {
 			int dx = p.x;
 			int dy = p.y;
 			int newX = p.x + x;
 			int newY = p.y + y;
-			if (grid[newX][newY])
+			if (grid[newX][newY]) {
 				return PLACE_BAD;
+			}
 			else
 				grid[newX][newY] = true;
 		}
 		
 		for(Point p: body)
-			if(getRowWidth(y + p.y) == width)
+			if(getRowWidth(y + p.y) == width) {
 				return PLACE_ROW_FILLED;
-		
+			}
 		return PLACE_OK;
 	}
 
