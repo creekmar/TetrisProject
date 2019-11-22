@@ -17,7 +17,7 @@ import java.util.*;
 */
 public final class Board  {
 	private int width;
-	private int height;
+	private int height; 
 	private boolean[][] grid;
 	private boolean[][] backupGrid;
 	
