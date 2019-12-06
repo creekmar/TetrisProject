@@ -112,10 +112,10 @@ public class LameBrain implements Brain {
 			}
 			
 			double avgHeight = ((double)sumHeight)/width;
-			
+		//	8*maxHeight + 40*avgHeight + 
 			// Add up the counts to make an overall score
 			// The weights, 8, 40, etc., are just made up numbers that appear to work
-			return (8*maxHeight + 40*avgHeight + 1.25*holes + Math.abs(rhole-lhole)-close*2);	
+			return (8*maxHeight + 40*avgHeight + holes + .5*Math.abs(rhole-lhole)-1.5*close);	
 		}
 
 

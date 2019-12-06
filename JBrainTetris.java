@@ -9,7 +9,7 @@ public class JBrainTetris extends JTetris {
 
 	JBrainTetris(int width, int height) {
 		super(width, height);
-		brain = new LameBrain();
+		brain = new MingBrain();
 
 		brainTimer = new javax.swing.Timer(DELAY/movesPerTick, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
